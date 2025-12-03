@@ -1,0 +1,299 @@
+/* Estilos para el Recibo Imprimible */
+.recibo-container {
+  display: none;
+}
+
+@media print {
+  .recibo-container {
+    display: block;
+    width: 210mm;
+    min-height: 148mm;
+    padding: 15mm;
+    margin: 0 auto;
+    background: white;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Encabezado */
+  .recibo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+  }
+
+  .logo-section {
+    flex: 0 0 80px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .logo-text {
+    font-size: 16pt;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 2px;
+  }
+
+  .logo-subtitle {
+    font-size: 7pt;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+
+  .empresa-info {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .empresa-info h1 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    letter-spacing: 0.5px;
+  }
+
+  .departamento {
+    font-size: 10pt;
+    font-style: italic;
+    margin: 0 0 8px 0;
+  }
+
+  .direccion {
+    font-size: 9pt;
+    margin: 2px 0;
+  }
+
+  .telefonos {
+    font-size: 9pt;
+    margin: 2px 0;
+  }
+
+  .orden-section {
+    flex: 0 0 120px;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .orden-label {
+    font-size: 8pt;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+  }
+
+  .orden-numero {
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    background: #f8f9fa;
+  }
+
+  /* Sección de Fecha */
+  .fecha-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+  }
+
+  .fecha-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+  }
+
+  .fecha-label {
+    font-size: 8pt;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+
+  .fecha-valor {
+    font-size: 14pt;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  /* Sección de Cliente */
+  .seccion-recibo {
+    margin-bottom: 10px;
+  }
+
+  .linea-recibo {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .label-recibo {
+    font-weight: bold;
+    font-size: 10pt;
+    white-space: nowrap;
+  }
+
+  .valor-recibo {
+    border-bottom: 1px solid #000;
+    padding: 2px 5px;
+    font-size: 10pt;
+    flex-grow: 1;
+  }
+
+  .tel-valor {
+    flex-grow: 0;
+    min-width: 120px;
+  }
+
+  .equipo-valor {
+    min-width: 200px;
+  }
+
+  .full-width {
+    flex-grow: 2;
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  /* Sección de Equipos */
+  .equipo-section {
+    margin-bottom: 12px;
+    padding: 8px 0;
+  }
+
+  .equipo-section sup {
+    font-size: 8pt;
+    vertical-align: super;
+  }
+
+  /* Observaciones */
+  .observaciones-section {
+    margin: 15px 0;
+  }
+
+  .observaciones-valor {
+    min-height: 20px;
+  }
+
+  .observaciones-lineas {
+    margin-top: 5px;
+  }
+
+  .linea-vacia {
+    border-bottom: 1px solid #000;
+    height: 15px;
+    margin-bottom: 5px;
+  }
+
+  /* Footer */
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 15px 0;
+    gap: 10px;
+  }
+
+  .firma-box {
+    flex: 1;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 8px;
+    min-height: 60px;
+  }
+
+  .firma-label {
+    font-size: 8pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .firma-contenido {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .cliente-box {
+    flex: 1;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 8px;
+    min-height: 60px;
+  }
+
+  .cliente-label {
+    font-size: 8pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .cliente-firma {
+    border-bottom: 2px solid #000;
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Cláusulas Legales */
+  .clausulas-section {
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+
+  .clausula-texto {
+    font-size: 8pt;
+    line-height: 1.3;
+    margin: 5px 0;
+    text-align: justify;
+  }
+
+  /* Ajustes de impresión */
+  @page {
+    size: A5 landscape;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Vista previa (no impresa) */
+@media screen {
+  .print-container .recibo-container {
+    display: block;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+}
