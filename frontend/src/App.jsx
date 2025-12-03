@@ -12,8 +12,8 @@ import Sucursales from './pages/Sucursales'
 import Traslados from './pages/Traslados'
 import Clientes from './pages/Clientes'
 
-// Configuración de axios
-axios.defaults.baseURL = 'http://localhost:8000/backend'
+// Configuración de axios para WAMP
+axios.defaults.baseURL = 'http://localhost/taller/backend'
 
 function App() {
   const [sucursales, setSucursales] = useState([])
